@@ -5,9 +5,9 @@ export default function Footer() {
  
 
   return (
-    <div className='flex justify-center bg-black text-white py-10'>
-      Copyright &copy; 2024 - ANOUAR 
-     
+    <div className="fixed bottom-0 w-full flex justify-center items-center bg-gray-600 text-white py-8 px-4">
+      Copyright &copy; 2024 - ANOUAR
     </div>
   )
+  
 }

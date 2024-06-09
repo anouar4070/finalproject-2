@@ -6,9 +6,10 @@ import logo from "../../assets/images/freshcart-logo.svg";
 export default function Navbar() {
   return (
     <>
-      <nav className=" bg-gray-100 static lg:fixed top-0 right-0  text-center    ">
+      <nav className="bg-gray-100 static lg:fixed top-0 right-0 left-0 text-center ">
         <div className="container mx-auto justify-between py-2 flex flex-col lg:flex-row items-center">
-          <div className="flex flex-col lg:flex-row items-center ">
+
+          <div className="flex flex-col lg:flex-row items-center">
             <img width={110} src={logo} alt="fresh cart logo" />
 
             <ul className="flex flex-col lg:flex-row items-center">
@@ -68,6 +69,7 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
+
         </div>
       </nav>
     </>
