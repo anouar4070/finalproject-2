@@ -1,57 +1,75 @@
 import React from "react";
-import Style from "./Navbar.module.css";
-import { Link } from "react-router-dom";
+
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/freshcart-logo.svg";
 
 export default function Navbar() {
   return (
     <>
-      <nav className="bg-gray-800">
-        <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div className="flex flex-shrink-0 items-center">
-            <Link to="/">
-              <img src={logo} alt="fresh market logo" />
-            </Link>
-          </div>
-          <div className="hidden sm:ml-6 sm:block">
-            <ul className="flex space-x-4">
+      <nav className=" bg-gray-100 static lg:fixed top-0 right-0  text-center    ">
+        <div className="container mx-auto justify-between py-2 flex flex-col lg:flex-row items-center">
+          <div className="flex flex-col lg:flex-row items-center ">
+            <img width={110} src={logo} alt="fresh cart logo" />
 
-            <li>
-                <Link className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" to="/">
+            <ul className="flex flex-col lg:flex-row items-center">
+              <li className="py-2">
+                <NavLink className="mx-2 text-lg text-slate-900" to="">
                   Home
-                </Link>
+                </NavLink>
               </li>
-              <li>
-                <Link className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" to="/cart">
+              <li className="py-2">
+                <NavLink className="mx-2 text-lg text-slate-900" to="cart">
                   Cart
-                </Link>
+                </NavLink>
               </li>
-              <li>
-                <Link className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" to="/products">
+              <li className="py-2">
+                <NavLink className="mx-2 text-lg text-slate-900" to="products">
                   Products
-                </Link>
+                </NavLink>
               </li>
-              <li>
-                <Link  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" to="/categories">
-                  Categories
-                </Link>
-              </li>
-              <li>
-                <Link className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" to="/brands">
+              <li className="py-2">
+                <NavLink className="mx-2 text-lg text-slate-900" to="brands">
                   Brands
-                </Link>
+                </NavLink>
               </li>
-              <li>
-                <Link className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" to="/blog">
-                  Blog
-                </Link>
+              <li className="py-2">
+                <NavLink
+                  className="mx-2 text-lg text-slate-900"
+                  to="categories"
+                >
+                  Categories
+                </NavLink>
               </li>
-
-             
             </ul>
           </div>
+
+          <div>
+            <ul className="flex flex-col lg:flex-row items-center">
+              <li className="py-2">
+                <NavLink className="mx-2 py-16 text-slate-900" to="login">
+                  Login
+                </NavLink>
+              </li>
+              <li className="py-2">
+                <NavLink className="mx-2 py-16 text-slate-900" to="register">
+                  Register
+                </NavLink>
+              </li>
+              <li className="py-2">
+                <NavLink className="mx-2 py-16 text-slate-900">Logout</NavLink>
+              </li>
+
+              <li className="py-2 flex items-center">
+                <i className="fab mx-2 fa-facebook"></i>
+                <i className="fab mx-2 fa-twitter"></i>
+                <i className="fab mx-2 fa-instagram"></i>
+                <i className="fab mx-2 fa-youtube"></i>
+                <i className="fab mx-2 fa-tiktok"></i>
+              </li>
+            </ul>
           </div>
-        </nav>          
+        </div>
+      </nav>
     </>
   );
 }

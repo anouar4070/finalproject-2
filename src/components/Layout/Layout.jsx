@@ -7,13 +7,16 @@ import Footer from "../Footer/Footer";
 
 const Layout = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <Outlet></Outlet>
+
+      <div className="container mx-auto my-6 py-10">
+        <Outlet></Outlet>
+      </div>
+
       <Footer />
-    </div>
+    </>
   );
 };
 
 export default Layout;
-
