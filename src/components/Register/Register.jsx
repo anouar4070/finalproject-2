@@ -1,4 +1,4 @@
-import { useFormik } from "formik";
+import { Form, useFormik } from "formik";
 import React, { useState, useEffect } from "react";
 import * as Yup from "yup";
 import axios from "axios";
@@ -168,7 +168,7 @@ const Register = () => {
       <div className="py-6 max-w-xl mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-green-600">Register now</h2>
         <form onSubmit={formik.handleSubmit}>
-          <div className+="relative z-0 w-full mb-5 group">
+        <div className="relative z-0 w-full mb-5 group">
             <input
               type="email"
               name="email"
